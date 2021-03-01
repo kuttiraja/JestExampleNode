@@ -4,7 +4,7 @@ const util = require('util');
 const keys = require('../config/keys')
 
 
-const redisClient = redis.createClient(redisURL);
+const redisClient = redis.createClient(keys.redisURL);
 redisClient.get = util.promisify(redisClient.get);
 redisClient.hget = util.promisify(redisClient.hget);
 
